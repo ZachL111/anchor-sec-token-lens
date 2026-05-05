@@ -1,0 +1,10 @@
+{
+  "name": "zachl111/anchor-sec-token-lens",
+  "description": "Implement a PHP security tooling project for token policy evaluation, using deny and allow fixtures and explainable decision traces.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Portfolio\\": "src/"
+    }
+  }
+}
