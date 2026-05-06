@@ -1,0 +1,73 @@
+{
+  "repo": "anchor-sec-token-lens",
+  "language": "PHP",
+  "category": "Security tooling",
+  "goal": "Implement a PHP security tooling project for token policy evaluation, using deny and allow fixtures and explainable decision traces.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 76,
+      "slack": 24,
+      "drag": 20,
+      "confidence": 93,
+      "score": 209,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 73,
+      "slack": 44,
+      "drag": 30,
+      "confidence": 57,
+      "score": 157,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 80,
+      "slack": 30,
+      "drag": 23,
+      "confidence": 85,
+      "score": 206,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 53,
+      "slack": 42,
+      "drag": 15,
+      "confidence": 55,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 52,
+      "slack": 43,
+      "drag": 12,
+      "confidence": 60,
+      "score": 171,
+      "lane": "ship"
+    }
+  ]
+}
