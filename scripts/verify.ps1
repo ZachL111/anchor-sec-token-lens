@@ -63,3 +63,9 @@ php tests/test_policy.php
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-anchor-sec-token-detail.ps1
 
 php tests/test_domain_review.php
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-anchor-sec-token-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-anchor-sec-token-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

@@ -1,0 +1,17 @@
+{
+  "repo": "anchor-sec-token-lens",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 183,
+    "watch": 104
+  },
+  "terms": [
+    "trust boundary",
+    "claim drift",
+    "replay exposure",
+    "policy width"
+  ]
+}
